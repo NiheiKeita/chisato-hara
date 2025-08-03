@@ -8,7 +8,7 @@ const CountPage = React.memo(() => {
   }, [])
   if (!isClient) {
     return null
-  } d
+  }
 
   return <CountView />
 })
