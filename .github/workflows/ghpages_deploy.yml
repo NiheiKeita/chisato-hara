@@ -4,6 +4,7 @@ on: [pull_request]
 # on:
 #   push:
 #     branches: [main]
+#   pull_request:
 
 permissions:
   contents: read
@@ -29,12 +30,14 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          NODE_ENV: production
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .next
+          path: out
 
   deploy:
     runs-on: ubuntu-latest
