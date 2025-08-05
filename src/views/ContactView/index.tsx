@@ -5,22 +5,22 @@ export default function ContactView() {
   useContactView()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <Header />
 
       <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
           <div className="mb-8 text-center">
-            <h2 className="mb-4 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-2xl font-bold text-transparent">お問い合わせ</h2>
-            <p className="text-gray-600">
+            <h2 className="mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-2xl font-playfair font-bold text-transparent">お問い合わせ</h2>
+            <p className="font-cormorant text-gray-300">
               作品の購入、展示のご相談、その他ご質問がございましたらお気軽にご連絡ください。
             </p>
           </div>
 
           <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="rounded-lg bg-gray-50/80 p-6 shadow-lg backdrop-blur-sm">
-              <h3 className="mb-4 text-lg font-semibold text-gray-900">連絡先情報</h3>
-              <div className="space-y-3 text-gray-600">
+            <div className="rounded-lg bg-gray-800/80 p-6 shadow-lg backdrop-blur-sm border border-gray-700/50">
+              <h3 className="mb-4 text-lg font-playfair font-semibold text-white">連絡先情報</h3>
+              <div className="space-y-3 font-inter text-gray-300">
                 <div>
                   <strong>Email:</strong><br />
                   chisato.hara@example.com
@@ -41,9 +41,9 @@ export default function ContactView() {
               </div>
             </div>
 
-            <div className="rounded-lg bg-gray-50/80 p-6 shadow-lg backdrop-blur-sm">
-              <h3 className="mb-4 text-lg font-semibold text-gray-900">SNS・その他</h3>
-              <div className="space-y-3 text-gray-600">
+            <div className="rounded-lg bg-gray-800/80 p-6 shadow-lg backdrop-blur-sm border border-gray-700/50">
+              <h3 className="mb-4 text-lg font-playfair font-semibold text-white">SNS・その他</h3>
+              <div className="space-y-3 font-inter text-gray-300">
                 <div>
                   <strong>Instagram:</strong><br />
                   @chisato_hara_art
@@ -60,12 +60,12 @@ export default function ContactView() {
             </div>
           </div>
 
-          <div className="rounded-lg border border-gray-200/50 bg-white/80 p-8 shadow-xl backdrop-blur-sm">
-            <h3 className="mb-6 text-lg font-semibold text-gray-900">お問い合わせフォーム</h3>
+          <div className="rounded-lg border border-gray-700/50 bg-gray-800/90 p-8 shadow-xl backdrop-blur-sm">
+            <h3 className="mb-6 text-lg font-playfair font-semibold text-white">お問い合わせフォーム</h3>
             <form className="space-y-6">
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="mb-2 block text-sm font-medium text-gray-700">
+                  <label htmlFor="name" className="mb-2 block text-sm font-inter font-medium text-gray-300">
                     お名前 *
                   </label>
                   <input
@@ -73,11 +73,11 @@ export default function ContactView() {
                     id="name"
                     name="name"
                     required
-                    className="w-full rounded-md border border-gray-300 px-3 py-2 transition-all duration-200 focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    className="w-full rounded-md border border-gray-600 bg-gray-700 px-3 py-2 text-white transition-all duration-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-700">
+                  <label htmlFor="email" className="mb-2 block text-sm font-inter font-medium text-gray-300">
                     メールアドレス *
                   </label>
                   <input
@@ -85,20 +85,20 @@ export default function ContactView() {
                     id="email"
                     name="email"
                     required
-                    className="w-full rounded-md border border-gray-300 px-3 py-2 transition-all duration-200 focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    className="w-full rounded-md border border-gray-600 bg-gray-700 px-3 py-2 text-white transition-all duration-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="subject" className="mb-2 block text-sm font-medium text-gray-700">
+                <label htmlFor="subject" className="mb-2 block text-sm font-inter font-medium text-gray-300">
                   件名 *
                 </label>
                 <select
                   id="subject"
                   name="subject"
                   required
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                  className="w-full rounded-md border border-gray-600 bg-gray-700 px-3 py-2 text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="">件名を選択してください</option>
                   <option value="purchase">作品の購入について</option>
@@ -109,7 +109,7 @@ export default function ContactView() {
               </div>
 
               <div>
-                <label htmlFor="message" className="mb-2 block text-sm font-medium text-gray-700">
+                <label htmlFor="message" className="mb-2 block text-sm font-inter font-medium text-gray-300">
                   メッセージ *
                 </label>
                 <textarea
@@ -117,7 +117,7 @@ export default function ContactView() {
                   name="message"
                   rows={6}
                   required
-                  className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                  className="w-full rounded-md border border-gray-600 bg-gray-700 px-3 py-2 text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="ご質問やご相談内容をお書きください"
                 ></textarea>
               </div>
@@ -125,7 +125,7 @@ export default function ContactView() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="rounded-md bg-gray-900 px-8 py-3 text-white transition-all duration-200 hover:scale-105 hover:bg-gray-800 hover:shadow-lg"
+                  className="rounded-md bg-blue-600 px-8 py-3 text-white transition-all duration-200 hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/25"
                 >
                   送信する
                 </button>
@@ -133,7 +133,7 @@ export default function ContactView() {
             </form>
           </div>
 
-          <div className="mt-8 text-center text-sm text-gray-500">
+          <div className="mt-8 text-center text-sm font-inter text-gray-400">
             <p>
               お送りいただいた内容は、原則として3営業日以内にご返信いたします。<br />
               お急ぎの場合は、お電話にてお問い合わせください。
@@ -142,9 +142,9 @@ export default function ContactView() {
         </div>
       </main>
 
-      <footer className="mt-16 border-t border-gray-200/50">
+      <footer className="mt-16 border-t border-gray-700/50">
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-          <div className="text-center text-gray-600">
+          <div className="text-center font-inter text-gray-400">
             <p>&copy; 2024 原 千里. All rights reserved.</p>
           </div>
         </div>
