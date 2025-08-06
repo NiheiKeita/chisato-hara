@@ -1,10 +1,12 @@
 import { renderHook, act } from '@testing-library/react'
 import { useHomeView } from './hooks'
+import { beforeEach, describe, expect, it } from 'vitest'
+import { fn } from '@storybook/test'
 
 const mockScrollY = 100
 
-const mockAddEventListener = jest.fn()
-const mockRemoveEventListener = jest.fn()
+const mockAddEventListener = fn()
+const mockRemoveEventListener = fn()
 
 Object.defineProperty(window, 'addEventListener', {
   value: mockAddEventListener,
@@ -21,7 +23,8 @@ Object.defineProperty(window, 'scrollY', {
 
 describe('useHomeView', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    mockAddEventListener.mockClear()
+    mockRemoveEventListener.mockClear()
   })
 
   it('should initialize with correct default values', () => {
