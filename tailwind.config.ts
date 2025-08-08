@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'playfair': ['var(--font-playfair)', 'serif'],
+        'inter': ['var(--font-inter)', 'sans-serif'],
+        'cormorant': ['var(--font-cormorant)', 'serif'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
