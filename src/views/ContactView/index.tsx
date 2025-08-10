@@ -15,7 +15,10 @@ export default function ContactView() {
         </div>
 
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 text-center shadow-lg transition-all duration-300 hover:bg-white hover:shadow-xl">
+          <a
+            href="mailto:ch0x0hr@gmail.com"
+            className="group block rounded-lg border border-gray-200 bg-gray-50 p-8 text-center shadow-lg transition-all duration-300 hover:bg-white hover:shadow-xl"
+          >
             <div className="mb-6">
               <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full bg-red-500">
                 <svg className="size-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -23,35 +26,31 @@ export default function ContactView() {
                 </svg>
               </div>
               <h3 className="mb-2 font-playfair text-xl font-semibold text-gray-900">Gmail</h3>
-              <a
-                href="mailto:ch0x0hr@gmail.com"
-                className="cursor-pointer font-inter text-lg text-gray-700 transition-colors duration-200 hover:text-gray-900"
-              >
+              <div className="font-inter text-lg text-gray-700 transition-colors duration-200 group-hover:text-gray-900">
                 ch0x0hr@gmail.com
-              </a>
+              </div>
             </div>
-          </div>
+          </a>
 
-          <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 text-center shadow-lg transition-all duration-300 hover:bg-white hover:shadow-xl">
+          <a
+            href="https://instagram.com/chisatohr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block rounded-lg border border-gray-200 bg-gray-50 p-8 text-center shadow-lg transition-all duration-300 hover:bg-white hover:shadow-xl"
+          >
             <div className="mb-6">
               <div className="mx-auto mb-4 flex size-16 items-center justify-center rounded-full">
                 <img
                   src={`${config.imageUrl}/images/logo/instagram-icon.svg`}
                   alt={"instagram icon"}
-                  className="cursor-pointer"
                 />
               </div>
               <h3 className="mb-2 font-playfair text-xl font-semibold text-gray-900">Instagram</h3>
-              <a
-                href="https://instagram.com/chisatohr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cursor-pointer font-inter text-lg text-gray-700 transition-colors duration-200 hover:text-gray-900"
-              >
+              <div className="font-inter text-lg text-gray-700 transition-colors duration-200 group-hover:text-gray-900">
                 @chisatohr
-              </a>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         <div className="mt-8 text-center">
