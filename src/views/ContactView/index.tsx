@@ -1,154 +1,62 @@
 import { useContactView } from "./hooks"
-import { Header } from "./components/Header"
 
 export default function ContactView() {
   useContactView()
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      <Header />
-
-      <main className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+    <>
         <div className="mx-auto max-w-2xl">
           <div className="mb-8 text-center">
-            <h2 className="mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-2xl font-playfair font-bold text-transparent">お問い合わせ</h2>
-            <p className="font-cormorant text-gray-300">
-              作品の購入、展示のご相談、その他ご質問がございましたらお気軽にご連絡ください。
+            <h1 className="mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-4xl font-playfair font-bold text-transparent">Contact</h1>
+            <p className="font-cormorant text-lg text-gray-300">
+              お問い合わせは以下の方法でお気軽にご連絡ください
             </p>
           </div>
 
           <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="rounded-lg bg-gray-800/80 p-6 shadow-lg backdrop-blur-sm border border-gray-700/50">
-              <h3 className="mb-4 text-lg font-playfair font-semibold text-white">連絡先情報</h3>
-              <div className="space-y-3 font-inter text-gray-300">
-                <div>
-                  <strong>Email:</strong><br />
-                  chisato.hara@example.com
+            <div className="rounded-lg bg-gray-800/80 p-8 shadow-lg backdrop-blur-sm border border-gray-700/50 text-center">
+              <div className="mb-6">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-600">
+                  <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
                 </div>
-                <div>
-                  <strong>電話:</strong><br />
-                  03-1234-5678
-                </div>
-                <div>
-                  <strong>営業時間:</strong><br />
-                  平日 10:00 - 18:00
-                </div>
-                <div>
-                  <strong>アトリエ住所:</strong><br />
-                  東京都渋谷区〇〇 1-2-3<br />
-                  アートビル 3F
-                </div>
+                <h3 className="mb-2 text-xl font-playfair font-semibold text-white">Gmail</h3>
+                <a 
+                  href="mailto:ch0x0hr@gmail.com" 
+                  className="text-lg font-inter text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  ch0x0hr@gmail.com
+                </a>
               </div>
             </div>
 
-            <div className="rounded-lg bg-gray-800/80 p-6 shadow-lg backdrop-blur-sm border border-gray-700/50">
-              <h3 className="mb-4 text-lg font-playfair font-semibold text-white">SNS・その他</h3>
-              <div className="space-y-3 font-inter text-gray-300">
-                <div>
-                  <strong>Instagram:</strong><br />
-                  @chisato_hara_art
+            <div className="rounded-lg bg-gray-800/80 p-8 shadow-lg backdrop-blur-sm border border-gray-700/50 text-center">
+              <div className="mb-6">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-600">
+                  <svg className="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.042-3.441.219-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.690 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.888-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z" />
+                  </svg>
                 </div>
-                <div>
-                  <strong>Twitter:</strong><br />
-                  @chisato_art
-                </div>
-                <div>
-                  <strong>展示スケジュール:</strong><br />
-                  定期的に更新いたします
-                </div>
+                <h3 className="mb-2 text-xl font-playfair font-semibold text-white">Instagram</h3>
+                <a 
+                  href="https://instagram.com/chisatohr" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-lg font-inter text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  @chisatohr
+                </a>
               </div>
             </div>
           </div>
 
-          <div className="rounded-lg border border-gray-700/50 bg-gray-800/90 p-8 shadow-xl backdrop-blur-sm">
-            <h3 className="mb-6 text-lg font-playfair font-semibold text-white">お問い合わせフォーム</h3>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <div>
-                  <label htmlFor="name" className="mb-2 block text-sm font-inter font-medium text-gray-300">
-                    お名前 *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full rounded-md border border-gray-600 bg-gray-700 px-3 py-2 text-white transition-all duration-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="mb-2 block text-sm font-inter font-medium text-gray-300">
-                    メールアドレス *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full rounded-md border border-gray-600 bg-gray-700 px-3 py-2 text-white transition-all duration-200 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="mb-2 block text-sm font-inter font-medium text-gray-300">
-                  件名 *
-                </label>
-                <select
-                  id="subject"
-                  name="subject"
-                  required
-                  className="w-full rounded-md border border-gray-600 bg-gray-700 px-3 py-2 text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                  <option value="">件名を選択してください</option>
-                  <option value="purchase">作品の購入について</option>
-                  <option value="exhibition">展示・委託について</option>
-                  <option value="media">メディア・取材について</option>
-                  <option value="other">その他</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="mb-2 block text-sm font-inter font-medium text-gray-300">
-                  メッセージ *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  required
-                  className="w-full rounded-md border border-gray-600 bg-gray-700 px-3 py-2 text-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="ご質問やご相談内容をお書きください"
-                ></textarea>
-              </div>
-
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="rounded-md bg-blue-600 px-8 py-3 text-white transition-all duration-200 hover:scale-105 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/25"
-                >
-                  送信する
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <div className="mt-8 text-center text-sm font-inter text-gray-400">
-            <p>
-              お送りいただいた内容は、原則として3営業日以内にご返信いたします。<br />
-              お急ぎの場合は、お電話にてお問い合わせください。
+          <div className="mt-8 text-center">
+            <p className="font-cormorant text-gray-400">
+              作品についてのお問い合わせや展示のご相談など、お気軽にご連絡ください
             </p>
           </div>
         </div>
-      </main>
-
-      <footer className="mt-16 border-t border-gray-700/50">
-        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-          <div className="text-center font-inter text-gray-400">
-            <p>&copy; 2024 原 千里. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </>
   )
 }

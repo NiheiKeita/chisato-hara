@@ -30,22 +30,21 @@ describe('useHomeView', () => {
   it('should initialize with correct default values', () => {
     const { result } = renderHook(() => useHomeView())
 
-    expect(result.current.scrollY).toBe(0)
     expect(result.current.hoveredCard).toBe(null)
-    expect(result.current.artworks).toHaveLength(6)
+    expect(Object.keys(result.current.works).length).toBe(4)
     expect(result.current.setHoveredCard).toBeInstanceOf(Function)
   })
 
-  it('should return artwork data correctly', () => {
+  it('should return works data correctly', () => {
     const { result } = renderHook(() => useHomeView())
 
-    expect(result.current.artworks[0]).toEqual({
+    expect(result.current.works.videos[0]).toEqual({
       id: 1,
-      title: "夏の風景",
-      medium: "Oil on Canvas",
+      title: "映像作品 1",
       year: "2024",
-      image: "/artworks/artwork1.jpg",
-      description: "美しい夏の自然を表現した作品"
+      image: "/works/video1.jpg",
+      description: "映像を用いた表現作品",
+      videoUrl: "https://example.com/video1"
     })
   })
 
@@ -65,17 +64,4 @@ describe('useHomeView', () => {
     expect(result.current.hoveredCard).toBe(null)
   })
 
-  it('should add scroll event listener on mount', () => {
-    renderHook(() => useHomeView())
-
-    expect(mockAddEventListener).toHaveBeenCalledWith('scroll', expect.any(Function))
-  })
-
-  it('should remove scroll event listener on unmount', () => {
-    const { unmount } = renderHook(() => useHomeView())
-
-    unmount()
-
-    expect(mockRemoveEventListener).toHaveBeenCalledWith('scroll', expect.any(Function))
-  })
 })
