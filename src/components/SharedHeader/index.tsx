@@ -5,10 +5,14 @@ import { usePathname } from "next/navigation"
 
 interface SharedHeaderProps {
   scrollY?: number
+  scrollDirection?: 'up' | 'down'
 }
 
-export function SharedHeader({ scrollY = 0 }: SharedHeaderProps) {
+export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHeaderProps) {
   const pathname = usePathname()
+  
+  // ヘッダーを隠すかどうかの判定
+  const shouldHideHeader = scrollDirection === 'down' && scrollY > 100
 
   return (
     <header
@@ -17,7 +21,7 @@ export function SharedHeader({ scrollY = 0 }: SharedHeaderProps) {
         : 'bg-transparent'
         }`}
       style={{
-        transform: pathname === '/' && scrollY > 100 ? `translateY(-100%)` : 'translateY(0%)',
+        transform: shouldHideHeader ? 'translateY(-100%)' : 'translateY(0%)',
       }}
     >
       <nav className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
