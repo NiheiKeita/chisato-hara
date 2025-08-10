@@ -2,6 +2,8 @@
 
 import { config } from "~/config"
 
+/* eslint-disable no-unused-vars */
+
 interface WorkCardProps {
   id: number
   title: string
@@ -41,8 +43,8 @@ export function WorkCard({
           }`} />
       </div>
       <div>
-        <h3 className="mb-1 text-xl font-cormorant font-semibold text-gray-900">{title}</h3>
-        <p className="text-sm font-cormorant text-gray-700">{description}</p>
+        <h3 className="mb-1 font-cormorant text-xl font-semibold text-gray-900">{title}</h3>
+        <p className="font-cormorant text-sm text-gray-700">{description}</p>
       </div>
     </div>
   )

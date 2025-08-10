@@ -20,8 +20,8 @@ export default function AboutView() {
           <div className="lg:col-span-2">
             <div className="space-y-12">
               <div>
-                <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-playfair font-bold text-transparent">Artist Statement</h2>
-                <div className="space-y-6 font-cormorant text-lg text-gray-700 leading-relaxed">
+                <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text font-playfair text-3xl font-bold text-transparent">Artist Statement</h2>
+                <div className="space-y-6 font-cormorant text-lg leading-relaxed text-gray-700">
                   <p>
                     Please write your artist statement here. Describe in detail your philosophy and thoughts about artwork creation, and what you want to express.
                   </p>
@@ -35,10 +35,10 @@ export default function AboutView() {
               </div>
 
               <div>
-                <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-3xl font-playfair font-bold text-transparent">Biography</h2>
+                <h2 className="mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text font-playfair text-3xl font-bold text-transparent">Biography</h2>
                 <div className="space-y-6 font-cormorant text-gray-700">
                   <div>
-                    <h3 className="mb-4 text-xl font-playfair font-semibold text-gray-900">Career</h3>
+                    <h3 className="mb-4 font-playfair text-xl font-semibold text-gray-900">Career</h3>
                     <div className="space-y-4 text-base">
                       <p>
                         Please write detailed career information here. Include date of birth, place of origin, education, major exhibition history, awards, etc. in chronological order.
@@ -50,7 +50,7 @@ export default function AboutView() {
                   </div>
 
                   <div>
-                    <h3 className="mb-4 text-xl font-playfair font-semibold text-gray-900">Major Exhibitions</h3>
+                    <h3 className="mb-4 font-playfair text-xl font-semibold text-gray-900">Major Exhibitions</h3>
                     <div className="space-y-3 font-inter text-gray-600">
                       <div className="border-l-2 border-gray-400 pl-4">
                         <div className="flex flex-col sm:flex-row sm:items-center">
@@ -74,7 +74,7 @@ export default function AboutView() {
                   </div>
 
                   <div>
-                    <h3 className="mb-4 text-xl font-playfair font-semibold text-gray-900">Awards & Grants</h3>
+                    <h3 className="mb-4 font-playfair text-xl font-semibold text-gray-900">Awards & Grants</h3>
                     <div className="space-y-3 font-inter text-gray-600">
                       <div className="border-l-2 border-gray-400 pl-4">
                         <div className="flex flex-col sm:flex-row sm:items-center">
@@ -92,7 +92,7 @@ export default function AboutView() {
                   </div>
 
                   <div>
-                    <h3 className="mb-4 text-xl font-playfair font-semibold text-gray-900">Collections</h3>
+                    <h3 className="mb-4 font-playfair text-xl font-semibold text-gray-900">Collections</h3>
                     <div className="space-y-2 font-inter text-gray-600">
                       <div className="text-sm">
                         List museums or institutions where works are collected

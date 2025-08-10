@@ -2,6 +2,8 @@
 
 import { WorkCard } from "../WorkCard"
 
+/* eslint-disable no-unused-vars */
+
 interface VideoPlayerProps {
   id: number
   title: string
@@ -9,7 +11,7 @@ interface VideoPlayerProps {
   description: string
   hoveredCard: number | null
   setHoveredCard: (id: number | null) => void
-  videoUrl: string
+  videoUrl?: string
   onImageClick: (image: string, title: string, description: string) => void
 }
 

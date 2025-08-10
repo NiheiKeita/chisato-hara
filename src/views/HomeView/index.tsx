@@ -10,17 +10,17 @@ export default function HomeView() {
   return (
     <>
       <div className="mb-16 text-center">
-        <h1 className="mb-6 bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text text-5xl font-playfair font-bold text-transparent">
+        <h1 className="mb-6 bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text font-playfair text-5xl font-bold text-transparent">
           原知里
         </h1>
-        <p className="mx-auto max-w-2xl text-lg font-cormorant text-gray-600">
+        <p className="mx-auto max-w-2xl font-cormorant text-lg text-gray-600">
           Explore works through videos, performances, installations, and art projects
         </p>
       </div>
 
       {/* Videos Section */}
       <section id="videos" className="mb-20">
-        <h2 className="mb-8 text-3xl font-playfair font-bold text-gray-900">Videos</h2>
+        <h2 className="mb-8 font-playfair text-3xl font-bold text-gray-900">Videos</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {works.videos.map((work) => (
             <WorkCard
@@ -39,7 +39,7 @@ export default function HomeView() {
 
       {/* Performances Section */}
       <section id="performances" className="mb-20">
-        <h2 className="mb-8 text-3xl font-playfair font-bold text-gray-900">Performances</h2>
+        <h2 className="mb-8 font-playfair text-3xl font-bold text-gray-900">Performances</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {works.performances.map((work) => (
             <WorkCard
@@ -58,7 +58,7 @@ export default function HomeView() {
 
       {/* Installations Section */}
       <section id="installations" className="mb-20">
-        <h2 className="mb-8 text-3xl font-playfair font-bold text-gray-900">Installations</h2>
+        <h2 className="mb-8 font-playfair text-3xl font-bold text-gray-900">Installations</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {works.installations.map((work) => (
             <WorkCard
@@ -77,7 +77,7 @@ export default function HomeView() {
 
       {/* Projects Section */}
       <section id="projects" className="mb-20">
-        <h2 className="mb-8 text-3xl font-playfair font-bold text-gray-900">Projects</h2>
+        <h2 className="mb-8 font-playfair text-3xl font-bold text-gray-900">Projects</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {works.projects.map((work) => (
             <WorkCard
@@ -96,7 +96,7 @@ export default function HomeView() {
 
       {/* Photography Section */}
       <section id="photography" className="mb-20">
-        <h2 className="mb-8 text-3xl font-playfair font-bold text-gray-900">Photography</h2>
+        <h2 className="mb-8 font-playfair text-3xl font-bold text-gray-900">Photography</h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {works.photography.map((work) => (
             <WorkCard

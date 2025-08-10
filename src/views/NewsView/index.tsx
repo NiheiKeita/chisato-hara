@@ -8,10 +8,10 @@ function NewsView() {
   return (
     <>
         <div className="mb-12 text-center">
-          <h1 className="mb-6 bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text text-4xl font-playfair font-bold text-transparent">
+          <h1 className="mb-6 bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text font-playfair text-4xl font-bold text-transparent">
             News
           </h1>
-          <p className="mx-auto max-w-2xl text-lg font-cormorant text-gray-700">
+          <p className="mx-auto max-w-2xl font-cormorant text-lg text-gray-700">
             Latest information about exhibitions, performances, and workshops
           </p>
         </div>
@@ -40,17 +40,17 @@ function NewsView() {
                     }`}>
                       {item.type === 'exhibition' ? 'Exhibition' : item.type === 'performance' ? 'Performance' : 'Workshop'}
                     </span>
-                    <time className="text-sm font-inter text-gray-600" dateTime={item.date}>
+                    <time className="font-inter text-sm text-gray-600" dateTime={item.date}>
                       {item.date}
                     </time>
                   </div>
-                  <h2 className="mb-3 text-xl font-playfair font-semibold text-gray-900">
+                  <h2 className="mb-3 font-playfair text-xl font-semibold text-gray-900">
                     {item.title}
                   </h2>
                   <p className="mb-4 font-cormorant text-gray-700">
                     {item.description}
                   </p>
-                  <div className="space-y-1 text-sm font-inter text-gray-600">
+                  <div className="space-y-1 font-inter text-sm text-gray-600">
                     <div>
                       <span className="font-medium text-gray-700">Venue:</span> {item.venue}
                     </div>

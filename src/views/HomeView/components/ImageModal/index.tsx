@@ -54,7 +54,7 @@ export function ImageModal({ isOpen, imageSrc, title, description, onClose }: Im
           </div>
           
           <div className="p-6">
-            <h3 className="mb-2 text-2xl font-playfair font-semibold text-gray-900">{title}</h3>
+            <h3 className="mb-2 font-playfair text-2xl font-semibold text-gray-900">{title}</h3>
             <p className="font-cormorant text-gray-700">{description}</p>
           </div>
         </div>
