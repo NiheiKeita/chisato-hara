@@ -10,6 +10,7 @@ interface VideoPlayerProps {
   hoveredCard: number | null
   setHoveredCard: (id: number | null) => void
   videoUrl: string
+  onImageClick: (image: string, title: string, description: string) => void
 }
 
 export function VideoPlayer({ 
@@ -18,7 +19,8 @@ export function VideoPlayer({
   image, 
   description,
   hoveredCard,
-  setHoveredCard
+  setHoveredCard,
+  onImageClick
 }: VideoPlayerProps) {
   return (
     <WorkCard
@@ -28,6 +30,7 @@ export function VideoPlayer({
       description={description}
       hoveredCard={hoveredCard}
       setHoveredCard={setHoveredCard}
+      onImageClick={onImageClick}
     />
   )
 }

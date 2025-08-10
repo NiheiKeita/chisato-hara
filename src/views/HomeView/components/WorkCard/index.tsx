@@ -9,6 +9,7 @@ interface WorkCardProps {
   description: string
   hoveredCard: number | null
   setHoveredCard: (id: number | null) => void
+  onImageClick: (image: string, title: string, description: string) => void
 }
 
 export function WorkCard({ 
@@ -17,7 +18,8 @@ export function WorkCard({
   image, 
   description, 
   hoveredCard, 
-  setHoveredCard 
+  setHoveredCard,
+  onImageClick
 }: WorkCardProps) {
   return (
     <div
@@ -26,7 +28,10 @@ export function WorkCard({
       onMouseEnter={() => setHoveredCard(id)}
       onMouseLeave={() => setHoveredCard(null)}
     >
-      <div className="relative mb-4 aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-gray-500/10">
+      <div 
+        className="relative mb-4 aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-gray-500/10"
+        onClick={() => onImageClick(image, title, description)}
+      >
         <img
           src={`${config.imageUrl}${image}`}
           alt={title}

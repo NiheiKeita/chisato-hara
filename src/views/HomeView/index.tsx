@@ -1,11 +1,11 @@
 "use client"
 
 import { useHomeView } from "./hooks"
-import { VideoPlayer } from "./components/VideoPlayer"
 import { WorkCard } from "./components/WorkCard"
+import { ImageModal } from "./components/ImageModal"
 
 export default function HomeView() {
-  const { hoveredCard, setHoveredCard, works } = useHomeView()
+  const { hoveredCard, setHoveredCard, works, selectedImage, openImageModal, closeImageModal } = useHomeView()
 
   return (
     <>
@@ -31,6 +31,7 @@ export default function HomeView() {
               description={work.description}
               hoveredCard={hoveredCard}
               setHoveredCard={setHoveredCard}
+              onImageClick={openImageModal}
             />
           ))}
         </div>
@@ -49,6 +50,7 @@ export default function HomeView() {
               description={work.description}
               hoveredCard={hoveredCard}
               setHoveredCard={setHoveredCard}
+              onImageClick={openImageModal}
             />
           ))}
         </div>
@@ -67,6 +69,7 @@ export default function HomeView() {
               description={work.description}
               hoveredCard={hoveredCard}
               setHoveredCard={setHoveredCard}
+              onImageClick={openImageModal}
             />
           ))}
         </div>
@@ -85,6 +88,7 @@ export default function HomeView() {
               description={work.description}
               hoveredCard={hoveredCard}
               setHoveredCard={setHoveredCard}
+              onImageClick={openImageModal}
             />
           ))}
         </div>
@@ -103,10 +107,19 @@ export default function HomeView() {
               description={work.description}
               hoveredCard={hoveredCard}
               setHoveredCard={setHoveredCard}
+              onImageClick={openImageModal}
             />
           ))}
         </div>
       </section>
+
+      <ImageModal
+        isOpen={selectedImage !== null}
+        imageSrc={selectedImage?.src || ""}
+        title={selectedImage?.title || ""}
+        description={selectedImage?.description || ""}
+        onClose={closeImageModal}
+      />
     </>
   )
 }

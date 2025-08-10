@@ -2,6 +2,11 @@ import { useState } from "react"
 
 export const useHomeView = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string
+    title: string
+    description: string
+  } | null>(null)
 
   const works = {
     videos: [
@@ -132,9 +137,20 @@ export const useHomeView = () => {
     ]
   }
 
+  const openImageModal = (image: string, title: string, description: string) => {
+    setSelectedImage({ src: image, title, description })
+  }
+
+  const closeImageModal = () => {
+    setSelectedImage(null)
+  }
+
   return {
     hoveredCard,
     setHoveredCard,
-    works
+    works,
+    selectedImage,
+    openImageModal,
+    closeImageModal
   }
 }
