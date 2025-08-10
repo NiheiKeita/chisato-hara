@@ -7,67 +7,127 @@ export const useHomeView = () => {
     videos: [
       {
         id: 1,
-        title: "映像作品 1",
+        title: "「いま、いま、いま、いま」①",
         year: "2024",
-        image: "/works/video1.jpg",
-        description: "映像を用いた表現作品",
+        image: "/images/video/「いま、いま、いま、いま」①.jpg",
+        description: "Video work exploring temporal expression",
         videoUrl: "https://example.com/video1"
       },
       {
         id: 2,
-        title: "映像作品 2",
+        title: "「いま、いま、いま、いま」②",
+        year: "2024",
+        image: "/images/video/「いま、いま、いま、いま」②.jpg",
+        description: "Video work exploring temporal expression",
+        videoUrl: "https://example.com/video1"
+      },
+      {
+        id: 3,
+        title: "運ばれる頁①",
         year: "2023",
-        image: "/works/video2.jpg",
-        description: "デジタル映像による実験的作品",
+        image: "/images/video/運ばれる頁①.JPG",
+        description: "Experimental digital video work",
+        videoUrl: "https://example.com/video2"
+      },
+      {
+        id: 4,
+        title: "運ばれる頁②",
+        year: "2023",
+        image: "/images/video/運ばれる頁②.JPG",
+        description: "Experimental digital video work",
         videoUrl: "https://example.com/video2"
       }
     ],
     performances: [
       {
-        id: 3,
-        title: "パフォーマンス作品 1",
-        year: "2024",
-        image: "/works/performance1.jpg",
-        description: "身体性を通じた表現"
+        id: 5,
+        title: "イスくんは、ぬくもりがすき。①",
+        year: "2023",
+        image: "/images/performances/イスくんは、ぬくもりがすき。①.JPG",
+        description: "Interactive performance emphasizing warmth and comfort"
       },
       {
-        id: 4,
-        title: "パフォーマンス作品 2",
+        id: 6,
+        title: "イスくんは、ぬくもりがすき。②",
         year: "2023",
-        image: "/works/performance2.jpg",
-        description: "観客との相互作用を重視した作品"
+        image: "/images/performances/イスくんは、ぬくもりがすき。②.jpg",
+        description: "Interactive performance emphasizing warmth and comfort"
+      },
+      {
+        id: 7,
+        title: "景",
+        year: "2024",
+        image: "/images/performances/景.png",
+        description: "Spatial performance work"
       }
     ],
     installations: [
       {
-        id: 5,
-        title: "インスタレーション作品 1",
+        id: 8,
+        title: "CONTACT.①",
         year: "2024",
-        image: "/works/installation1.jpg",
-        description: "空間を使った立体作品"
+        image: "/images/installation/CONTACT.①.png",
+        description: "Installation exploring human connection"
       },
       {
-        id: 6,
-        title: "インスタレーション作品 2",
+        id: 9,
+        title: "CONTACT.②",
+        year: "2024",
+        image: "/images/installation/CONTACT.②.png",
+        description: "Installation exploring human connection"
+      },
+      {
+        id: 10,
+        title: "CONTACT.③",
+        year: "2024",
+        image: "/images/installation/CONTACT.③.jpg",
+        description: "Installation exploring human connection"
+      },
+      {
+        id: 11,
+        title: "CONTACT.④",
+        year: "2024",
+        image: "/images/installation/CONTACT.④.png",
+        description: "Installation exploring human connection"
+      }
+    ],
+    photography: [
+      {
+        id: 12,
+        title: "在る身体シリーズ①",
         year: "2023",
-        image: "/works/installation2.jpg",
-        description: "光と影を使った空間演出"
+        image: "/images/photography/在る身体シリーズ①.png",
+        description: "Photography series exploring physical presence"
+      },
+      {
+        id: 13,
+        title: "在る身体シリーズ②",
+        year: "2023",
+        image: "/images/photography/在る身体シリーズ②.png",
+        description: "Photography series exploring body and space"
+      },
+      {
+        id: 14,
+        title: "在る身体シリーズ③",
+        year: "2023",
+        image: "/images/photography/在る身体シリーズ③.png",
+        description: "Photography series exploring body and space"
       }
     ],
     projects: [
       {
-        id: 7,
-        title: "アートプロジェクト 1",
+        id: 15,
+        title: "2:DUO①",
         year: "2024",
-        image: "/works/project1.jpg",
-        description: "地域と連携したアートプロジェクト"
+        image: "/images/project/2:DUO①.png",
+        description: "Collaborative art project"
       },
       {
-        id: 8,
-        title: "アートプロジェクト 2",
-        year: "2023",
-        image: "/works/project2.jpg",
-        description: "コミュニティベースの創作活動"
+        id: 16,
+        title: "2:DUO②",
+        year: "2024",
+        image: "/images/project/2:DUO②.png",
+        description: "Collaborative art project"
       }
     ]
   }

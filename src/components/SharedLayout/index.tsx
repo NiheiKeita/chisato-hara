@@ -43,17 +43,17 @@ export function SharedLayout({ children }: SharedLayoutProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+    <div className="min-h-screen bg-white">
       <SharedHeader scrollY={scrollY} scrollDirection={scrollDirection} />
 
       <main className={getMainClasses()}>
         {children}
       </main>
 
-      <footer className="mt-16 border-t border-gray-700/50">
+      <footer className="mt-16 border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-          <div className="text-center font-inter text-gray-400">
-            <p>&copy; 2025 CHISATO HARA. All rights reserved.</p>
+          <div className="text-center font-inter text-gray-600">
+            <p>&copy; 2025 原知里. All rights reserved.</p>
           </div>
         </div>
       </footer>

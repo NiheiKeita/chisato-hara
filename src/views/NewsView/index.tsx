@@ -8,11 +8,11 @@ function NewsView() {
   return (
     <>
         <div className="mb-12 text-center">
-          <h1 className="mb-6 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-4xl font-playfair font-bold text-transparent">
+          <h1 className="mb-6 bg-gradient-to-r from-gray-900 via-gray-600 to-gray-900 bg-clip-text text-4xl font-playfair font-bold text-transparent">
             News
           </h1>
-          <p className="mx-auto max-w-2xl text-lg font-cormorant text-gray-300">
-            展示、出演、ワークショップなどの最新情報をお知らせします
+          <p className="mx-auto max-w-2xl text-lg font-cormorant text-gray-700">
+            Latest information about exhibitions, performances, and workshops
           </p>
         </div>
 
@@ -20,7 +20,7 @@ function NewsView() {
           {news.map((item, index) => (
             <article 
               key={item.id}
-              className="rounded-lg border border-gray-700/50 bg-gray-800/50 p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-gray-600/50 hover:bg-gray-800/70"
+              className="rounded-lg border border-gray-200 bg-gray-50 p-6 shadow-lg transition-all duration-300 hover:border-gray-300 hover:bg-white hover:shadow-xl"
               style={{
                 animationDelay: `${index * 100}ms`,
                 animation: 'fadeInUp 0.8s ease-out forwards',
@@ -33,40 +33,40 @@ function NewsView() {
                   <div className="mb-2 flex items-center space-x-3">
                     <span className={`inline-flex rounded-full px-3 py-1 text-xs font-medium ${
                       item.type === 'exhibition' 
-                        ? 'bg-blue-900/50 text-blue-300' 
+                        ? 'bg-blue-100 text-blue-700' 
                         : item.type === 'performance'
-                        ? 'bg-purple-900/50 text-purple-300'
-                        : 'bg-green-900/50 text-green-300'
+                        ? 'bg-purple-100 text-purple-700'
+                        : 'bg-green-100 text-green-700'
                     }`}>
-                      {item.type === 'exhibition' ? '展示' : item.type === 'performance' ? 'パフォーマンス' : 'ワークショップ'}
+                      {item.type === 'exhibition' ? 'Exhibition' : item.type === 'performance' ? 'Performance' : 'Workshop'}
                     </span>
-                    <time className="text-sm font-inter text-gray-400" dateTime={item.date}>
+                    <time className="text-sm font-inter text-gray-600" dateTime={item.date}>
                       {item.date}
                     </time>
                   </div>
-                  <h2 className="mb-3 text-xl font-playfair font-semibold text-white">
+                  <h2 className="mb-3 text-xl font-playfair font-semibold text-gray-900">
                     {item.title}
                   </h2>
-                  <p className="mb-4 font-cormorant text-gray-300">
+                  <p className="mb-4 font-cormorant text-gray-700">
                     {item.description}
                   </p>
-                  <div className="space-y-1 text-sm font-inter text-gray-400">
+                  <div className="space-y-1 text-sm font-inter text-gray-600">
                     <div>
-                      <span className="font-medium text-gray-300">会場:</span> {item.venue}
+                      <span className="font-medium text-gray-700">Venue:</span> {item.venue}
                     </div>
                     <div>
-                      <span className="font-medium text-gray-300">期間:</span> {item.period}
+                      <span className="font-medium text-gray-700">Period:</span> {item.period}
                     </div>
                     {item.url && (
                       <div>
-                        <span className="font-medium text-gray-300">詳細:</span>{' '}
+                        <span className="font-medium text-gray-700">Details:</span>{' '}
                         <a 
                           href={item.url} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-blue-400 hover:text-blue-300 hover:underline"
+                          className="text-blue-600 hover:text-blue-800 hover:underline"
                         >
-                          公式サイト
+                          Official Website
                         </a>
                       </div>
                     )}
@@ -78,8 +78,8 @@ function NewsView() {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="font-cormorant text-gray-400">
-            過去のニュースは順次アーカイブされます
+          <p className="font-cormorant text-gray-600">
+            Past news will be archived sequentially
           </p>
         </div>
     </>
