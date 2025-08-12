@@ -30,23 +30,28 @@ describe('useHomeView', () => {
   it('should initialize with correct default values', () => {
     const { result } = renderHook(() => useHomeView())
 
-    expect(result.current.scrollY).toBe(0)
     expect(result.current.hoveredCard).toBe(null)
-    expect(result.current.artworks).toHaveLength(6)
+    expect(Object.keys(result.current.works).length).toBe(5)
     expect(result.current.setHoveredCard).toBeInstanceOf(Function)
+    expect(result.current.selectedImage).toBe(null)
+    expect(result.current.openImageModal).toBeInstanceOf(Function)
+    expect(result.current.closeImageModal).toBeInstanceOf(Function)
   })
 
-  it('should return artwork data correctly', () => {
+  it('should return works data correctly', () => {
     const { result } = renderHook(() => useHomeView())
 
-    expect(result.current.artworks[0]).toEqual({
+    expect(result.current.works.videos[0]).toEqual({
       id: 1,
-      title: "夏の風景",
-      medium: "Oil on Canvas",
+      title: "「いま、いま、いま、いま」①",
       year: "2024",
-      image: "/artworks/artwork1.jpg",
-      description: "美しい夏の自然を表現した作品"
+      image: "/images/video/「いま、いま、いま、いま」①.jpg",
+      description: "Video work exploring temporal expression",
+      videoUrl: "https://example.com/video1"
     })
+
+    expect(result.current.works.photography).toBeDefined()
+    expect(result.current.works.photography.length).toBeGreaterThan(0)
   })
 
   it('should update hoveredCard state', () => {
@@ -65,17 +70,26 @@ describe('useHomeView', () => {
     expect(result.current.hoveredCard).toBe(null)
   })
 
-  it('should add scroll event listener on mount', () => {
-    renderHook(() => useHomeView())
+  it('should handle image modal state', () => {
+    const { result } = renderHook(() => useHomeView())
 
-    expect(mockAddEventListener).toHaveBeenCalledWith('scroll', expect.any(Function))
+    expect(result.current.selectedImage).toBe(null)
+
+    act(() => {
+      result.current.openImageModal('/test.jpg', 'Test Title', 'Test Description')
+    })
+
+    expect(result.current.selectedImage).toEqual({
+      src: '/test.jpg',
+      title: 'Test Title',
+      description: 'Test Description'
+    })
+
+    act(() => {
+      result.current.closeImageModal()
+    })
+
+    expect(result.current.selectedImage).toBe(null)
   })
 
-  it('should remove scroll event listener on unmount', () => {
-    const { unmount } = renderHook(() => useHomeView())
-
-    unmount()
-
-    expect(mockRemoveEventListener).toHaveBeenCalledWith('scroll', expect.any(Function))
-  })
 })

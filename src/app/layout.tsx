@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Playfair_Display, Inter, Cormorant_Garamond } from "next/font/google"
 import React from "react"
+import { SharedLayout } from "~/components/SharedLayout"
 import "./globals.css"
 
 const playfairDisplay = Playfair_Display({ 
@@ -23,8 +24,8 @@ const cormorantGaramond = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "原 千里 - アーティスト",
-  description: "アーティスト原千里の作品集とプロフィール",
+  title: "CHISATO HARA - Artist",
+  description: "Artist portfolio featuring videos, performances, installations, and art projects by Chisato Hara",
 }
 
 export default function RootLayout({
@@ -34,7 +35,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${playfairDisplay.variable} ${inter.variable} ${cormorantGaramond.variable}`}>
-      <body className="font-inter antialiased">{children}</body>
+      <body className="font-inter antialiased">
+        <SharedLayout>{children}</SharedLayout>
+      </body>
     </html>
   )
 }
